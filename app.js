@@ -170,8 +170,12 @@ app.get("/transderhistory", function (req, res) {
 })
 
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
-app.listen(3000, function (err) {
+app.listen(port, function (err) {
     console.log("server established and listening port 3000")
 })
 
