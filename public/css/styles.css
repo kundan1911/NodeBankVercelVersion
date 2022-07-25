@@ -1,0 +1,315 @@
+/* OTP:- 1557 */
+
+.navbar {
+    padding: 0;
+}
+
+.moto>p {
+    letter-spacing: 5px;
+    width: 320px;
+}
+
+.designate {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 60px;
+    height: 70px;
+}
+
+.name {
+    font-size: 50px;
+    padding-left: 5px;
+}
+
+.name>p>span {
+    font-weight: 100;
+}
+
+.expanded {
+    font-size: 13px;
+    width: 115px;
+    padding-top: 13px;
+    color: rgba(34, 74, 237, 0.798);
+    font-weight: 900;
+}
+
+.expanded>p {
+    font-size: 9px;
+    color: black;
+}
+
+.pulse {
+    animation: pulse 3s infinite;
+}
+
+.bank-coin {
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(-180deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        font-weight: 100;
+    }
+
+    50% {
+        font-weight: 700;
+    }
+
+    100% {
+        font-weight: 100;
+    }
+
+}
+
+.intro {
+    background-image: url("https://media.istockphoto.com/photos/biometrics-security-businessman-using-fingerprint-identification-to-picture-id1334590466?b=1&k=20&m=1334590466&s=170667a&w=0&h=uAFHLmodIqQetKe7z1UDY534SUd6PkGoE12aCWaMP5I=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    color: aliceblue;
+}
+
+.newgen {
+    color: #fff;
+    letter-spacing: 2;
+    position: absolute;
+    animation: slideIn 1.5s;
+    margin-top: 17%;
+    margin-left: 3%;
+    letter-spacing: 2px;
+}
+
+@keyframes slideIn {
+    from {
+        margin-top: 25%;
+        margin-left: 5%;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.grid1 {
+
+    text-align: center;
+    background-color: black;
+    color: #fff;
+
+}
+
+.griditem {
+    margin: 3% auto;
+
+}
+
+.grid2 {
+    margin-top: 4rem;
+}
+
+.grid2item {
+
+    text-align: center;
+    align-items: center;
+    margin-top: 4%;
+
+}
+
+.grid2item>p {
+    text-align: none;
+}
+
+.gridimg>img {
+    width: 20em;
+    height: 13em;
+    border-radius: 20px;
+    transition: 0.25s all ease-in-out;
+}
+
+.gridimg>img:hover {
+    transform: scale(1.05);
+}
+
+.reverseit {
+    flex-wrap: wrap-reverse;
+}
+
+.connectbank {
+    text-align: center;
+}
+
+.connectbank>img {
+    width: 100%;
+    height: 0%;
+}
+
+.lettersp {
+    letter-spacing: 4px;
+}
+
+.Testimonials {
+    text-align: center;
+    background-color: rgb(128, 128, 128);
+}
+
+.testimonial-text {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.testimonial-image {
+    /* image follow the parent alignment property as natural inline element  */
+    width: 7em;
+    border-radius: 100%;
+    /*a perfect circle */
+    margin: 20px;
+}
+
+
+
+.cmpttable {
+    text-align: center;
+}
+
+.transferintro {
+    color: #fff;
+    text-align: center;
+    font-size: 37px;
+    margin-top: 20px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tablebody {
+    background: #353a40;
+}
+
+table {
+    border-collapse: separate;
+    background: #fff;
+    border-radius: 5px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+thead {
+    border-radius: 5px;
+}
+
+thead th {
+    font-family: 'Patua One', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(#646f7f, #4a5564);
+    border-top: 1px solid #858d99;
+
+}
+
+tbody tr td {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #5f6062;
+    font-size: 18px;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid #e0e0e0;
+
+}
+
+tbody tr:nth-child(2n) {
+    background: #f0f3f5;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+
+}
+
+tbody:hover>tr td {
+    opacity: 0.5;
+
+    /* uncomment for blur effect */
+    /* color:transparent;
+  @include text-shadow(0px 0px 2px rgba(0,0,0,0.8));*/
+}
+
+tbody:hover>tr:hover td {
+    text-shadow: none;
+    color: #2d2d2d;
+    opacity: 1.0;
+}
+
+dialog::backdrop {
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2) 1px,
+            rgba(0, 0, 0, 0.3) 1px,
+            rgba(0, 0, 0, 0.3) 20px);
+    backdrop-filter: blur(3px);
+}
+
+#favDialog {
+    width: 550px;
+    border-radius: 18px;
+    letter-spacing: 3px;
+}
+
+#allcustomer,
+#Transferamount {
+    width: 90%;
+    height: 40px;
+}
+
+.transferbtn {
+    text-align: center;
+}
+
+#footer .container-fluid {
+    padding: 2% 15%;
+    text-align: center;
+}
+
+.media {
+    margin: 20px 10px;
+}
+
+label {
+
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+@media screen and (max-width: 680px) {
+
+    thead th,
+    tbody tr td {
+        padding: 10px 1px;
+    }
+}

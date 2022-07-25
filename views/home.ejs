@@ -1,0 +1,82 @@
+<%- include('header'); -%>
+   <div class="transferintro">
+      Select the sender via respective checkbox
+   </div>
+   <table>
+      <thead>
+         <tr>
+            <th>
+               #
+            </th>
+            <th>
+               First
+            </th>
+            <th>
+               Last
+            </th>
+            <th>
+               Handle
+            </th>
+            <th>
+               Balance
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <% let size=customers.length %>
+            <% for(let i=0;i< size;i++){ %>
+               <tr>
+                  <td>
+                     <%=i+1%>
+                  </td>
+                  <td>
+                     <input type="checkbox" value="<%=customers[i].first%>" name="customerid" class="buttons"> <strong>
+                        <%= customers[i].first %>
+                     </strong>
+                  </td>
+                  <td>
+                     <%= customers[i].last %>
+                  </td>
+                  <td>
+                     <%= customers[i].email %>
+                  </td>
+                  <td>
+                     <%= customers[i].Balance %>
+                  </td>
+               </tr>
+               <% } %>
+      </tbody>
+   </table>
+   <form action="/transderhistory" method="get" class="transferbtn">
+      <button class="btn btn-outline-secondary btn-lg">Transfer History</button>
+   </form>
+   <dialog id="favDialog">
+      <div>
+         <form action="/customers" method="post">
+            <label for="allcustomer">Select the receiver</label>
+            <select id="allcustomer" name="receiver">
+               <option value="default">Choose...</option>
+               <option>Kundan</option>
+               <option>Dhiraj</option>
+               <option>Aanand</option>
+               <option>Rahul</option>
+               <option>Nitesh</option>
+               <option>Jitendar</option>
+               <option>Santosh</option>
+               <option>Pradeep</option>
+               <option>Saurav</option>
+               <option>Satish</option>
+            </select>
+            <br>
+            <input class="thesender" type="hidden" name="sender" value="default">
+            <br>
+            <label for="Transferamount">Enter the amount</label>
+            <input id="Transferamount" type="integer" name="amount" autocomplete="off"><br>
+            <br>
+            <button type="submit" id="confirmBtn" value="submit" class="btn btn-outline-dark">Send</button>
+         </form>
+      </div>
+
+   </dialog>
+   <script src="javasript/indes.js"></script>
+   <%- include('footer'); -%>

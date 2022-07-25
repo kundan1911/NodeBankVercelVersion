@@ -1,0 +1,43 @@
+<%- include('header'); -%>
+   <table border="solid">
+      <thead>
+         <th>
+            Date
+         </th>
+         <th>
+            Time
+         </th>
+         <th>
+            Sender
+         </th>
+         <th>
+            Receiver
+         </th>
+         <th>
+            Amount
+         </th>
+      </thead>
+      <tbody>
+         <% let size=alltransactions.length %>
+            <% for(let i=0;i< size;i++){ %>
+               <tr>
+                  <td>
+                     <%= alltransactions[i].date %>
+                  </td>
+                  <td>
+                     <%= alltransactions[i].time %>
+                  </td>
+                  <td>
+                     <%= alltransactions[i].sender %>
+                  </td>
+                  <td>
+                     <%= alltransactions[i].receipent %>
+                  </td>
+                  <td>
+                     <%= alltransactions[i].amount %>
+                  </td>
+               </tr>
+               <% } %>
+      </tbody>
+   </table>
+   <%- include('footer'); -%>
