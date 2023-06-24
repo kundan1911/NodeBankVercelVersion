@@ -11,7 +11,13 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // customer data 
 
-mongoose.connect("mongodb+srv://new_user_31:12345@atlascluster.mrex7.mongodb.net/BankDB");
+
+mongoose.connect("mongodb+srv://admin-kundan:Kundan%4019@cluster0.0qyqn.mongodb.net/BankDB?retryWrites=true&w=majority");
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error: "));
+db.once("open", function () {
+  console.log("Connected successfully");
+});
 function populateDB() {
     const cust1 = {
         first: "Kundan",
@@ -181,7 +187,7 @@ app.listen(port, function (err) {
 
 
 
-
+export app
 
 
 
